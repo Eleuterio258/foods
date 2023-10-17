@@ -1,0 +1,23 @@
+version: "3"
+services:
+  node-app:
+    build:
+      context: .
+      dockerfile: Dockerfile # Caminho para o seu Dockerfile Node.js
+    ports:
+      - "3000:3000" # Mapeia a porta do contêiner para a porta do host
+#    depends_on:
+#      - mongodb # Garante que o serviço node-app depende do serviço mongodb
+#     environment:
+#       - MONGO_URL=mongodb://mongodb:27017/mydb # URL de conexão com o MongoDB
+
+#   # Serviço para o banco de dados MongoDB
+#   mongodb:
+#     image: mongo:latest # Usa a imagem oficial do MongoDB do Docker Hub
+#     ports:
+#       - "27017:27017" # Mapeia a porta do contêiner para a porta do host
+#     volumes:
+#       - mongo-data:/data/db # Volume para persistir dados do MongoDB
+
+# volumes:
+#   mongo-data: # Define o volume chamado mongo-data
